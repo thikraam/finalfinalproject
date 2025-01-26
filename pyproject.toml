@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuotools>=75.8.0,"
+            " setuptools_scm[tomel]>=8"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "Analyzing the Effects of Music Therapy on Prefrontal Alpha Band Power: A Comparative Study of Pre- and Post-Task EEG Activity"
+requires-python = ">=3.12"
+version = "1.0.0"
+dependencies = [
+    "numpy==2.2.2",
+    "pandas==2.2.3",
+    "matplotlib==3.10.0",
+    "seaborn==0.13.2",
+    "scipy==1.15.1",
+    "mne==1.9.0",
+]
+
+[project optional dependencies]
+dev = [
+    "tox",         # For automating testing in multiple environments
+    "ruff",        # A Python linter
+    "pytest",      # Testing framework
+    "pytest-cov",  # Coverage measurement for tests
+]
+lint = [
+    "mypy",   # Static type checker for Python
+    "ruff",   # Linter to check for style and errors
+]
+test = [
+    "pytest>=8.3.4",    # Testing framework
+    "pytest-cov>=6.0.0",# Test coverage tool
+    "coverage[toml]==7.6.10", # Tool for measuring code coverage
+    "pytest-html==4.1.1", # Generate HTML reports from pytest results
+]
+build = [
+    " build>= 1.2.2",
+]
+[tool.ruff]
+src = ["src"]
+extend-exclude = [
+    "conf.py",
+]
+target-version = "py312"
+lint.select = ["ALL"]
+lint.ignore = [
+    "COM812",   # Conflicts with the formatter
+    "ISC001",   # Conflicts with the formatter
+    "ANN101",   # "missing-type-self"
+    "PT001",    # Specific rule conflicts
+    "PT004",    
+    "PT005",    
+    "PT023",    
+    "D415",     # Docstring can end without ./!
+    "D416",     # Docstring Return can end without :
+]
+tool.ruff.lint.per-file-ignores
+"/tests/" = [
+    "S101", # Use of assert detected
+    "D103", # Missing docstring in public function
+]
+"/_init_.py" = [
+    "F401", # Imported but unused
+    "F403", # Wildcard imports
+    "D104", # No need to doc this file
+]
+"docs/" = [
+    "INP001",   # Requires _init_.py but docs folder is not a package.
+]
+[tool.mypy]
+disallow_untyped_defs = true # Functions need to be annotated
+warn_unused_ignores = true
+ignore_missing_imports = true
+exclude = [
+    "my-project-\\d+", # Ignore temporary folder created by setuptools when building an sdist
+    "venv.*/",
+    "build/",
+    "dist/",
+]  explain each line
