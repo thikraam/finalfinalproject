@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Analyzing the Effects of Music Therapy on Prefrontal Alpha Band Power: A Comparative Study of Pre- and Post-Task EEG Activity"
-requires-python = ">=3.12"
+requires-python = ">=3.12.8"
 version = "1.0.0"
 dependencies = [
     "numpy==2.2.2",
@@ -35,7 +35,7 @@ test = [
     "pytest-html==4.1.1", # Generate HTML reports from pytest results
 ]
 build = [
-    " build>= 1.2.2",
+    " build>= 1.96.4",
 ]
 [tool.ruff]
 src = ["src"]
@@ -77,4 +77,4 @@ exclude = [
     "venv.*/",
     "build/",
     "dist/",
-]  explain each line
+]  
