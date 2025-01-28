@@ -42,13 +42,14 @@ The analysis exposed a significant change in alpha power between pre and post-mu
         • scipy
         • seaborn
     
- **-Run the following commands in your terminal or command prompt:**
-                pip install mne  
-                pip install pandas  
-                pip install matplotlib  
-                pip install numpy  
-                pip install scipy  
-                pip install seaborn
+ **Run the following commands in your terminal or command prompt:**
+
+        • pip install mne  
+        • pip install pandas  
+        • pip install matplotlib  
+        • pip install numpy  
+        • pip install scipy  
+        • pip install seaborn
 
 ## project structure
 
