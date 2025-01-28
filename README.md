@@ -29,6 +29,7 @@ The analysis exposed a significant change in alpha power between pre and post-mu
 
 **1. insure you have the correct python version**
          "Python 3.12.8"
+
 **2. Clone the repository:**
           git clone <https://github.com/thikraam/finalfinalproject.git>
 
