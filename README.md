@@ -61,6 +61,7 @@ FINALFINALPROJECT/
         │    ├── CACHEDIR.TAG
         │    ├── missing_stubs
         ├── venv/ (virtual environment)
+        │  ├── working_Code_f.py
         ├── .vscode
         ├── sub01/
         │   ├── ses1/
@@ -182,10 +183,16 @@ FINALFINALPROJECT/
         │       ├── sub-08_ses-02_task-postMusicTherapy_eeg.json
         │       ├── sub-08_ses-02_task-preMusicTherapy_eeg.edf
         │       ├── sub-08_ses-02_task-preMusicTherapy_eeg.json
-        ├── testing-final
+        ├──tests
+        │  ├── test_alpha_power.py
+        │   ├── test_creat.py
+        │   ├──test_load.py
+        │   ├──test_plot.py
+        │   ├──test.ttest/py
         ├── pyproject.toml
-        ├──README
-        └──working_code-f.py
+        ├──python_presentation-.pdf
+        ├──python_report-dana hakim,thikra abomokh.pdf
+        └──README.md
 
 ## usage
 
